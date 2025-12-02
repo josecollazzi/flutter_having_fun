@@ -32,3 +32,11 @@ jobs:
           # Absolute path from repo root to the lcov file generated above
           path: coverage/lcov.info
           min_coverage: 50
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage/lcov.info
+          flags: unittests
+          fail_ci_if_error: true
