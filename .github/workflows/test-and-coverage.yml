@@ -1,0 +1,34 @@
+name: Test & Coverage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run tests with coverage
+        run: flutter test --coverage
+
+      # Enforce minimum 50% line coverage
+      - name: Enforce coverage >= 65%
+        uses: VeryGoodOpenSource/very_good_coverage@v3
+        with:
+          # Absolute path from repo root to the lcov file generated above
+          path: /coverage/lcov.info
+          min_coverage: 50
