@@ -5,7 +5,6 @@ This repo is intentionally a **trial-and-error sandbox**, but with **real archit
 
 [![codecov](https://codecov.io/gh/josecollazzi/flutter_having_fun/branch/main/graph/badge.svg)](https://codecov.io/gh/josecollazzi/flutter_having_fun)
 
-
 ---
 
 ## Purpose
@@ -49,3 +48,9 @@ If tests fail or coverage drops below 50%, merging is blocked.
 ##  Architecture
 
 A simple layered structure:
+- **data**
+- **model** 
+- **view-model**
+
+### Folders organized by features
+
