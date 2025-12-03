@@ -22,7 +22,7 @@ void main() {
       ),
     );
 
-    expect(find.text('Demo'), findsOneWidget);
+    expect(find.text('Home'), findsOneWidget);
     expect(find.byType(CircularProgressIndicator), findsOneWidget);
   });
 
@@ -41,7 +41,7 @@ void main() {
       ),
     );
 
-    expect(find.text('Demo'), findsOneWidget);
+    expect(find.text('Home'), findsOneWidget);
     expect(find.text('error'), findsOneWidget);
   });
 
@@ -66,14 +66,18 @@ void main() {
           ),
         );
 
-        // AppBar title
-        expect(find.text('Demo'), findsOneWidget);
+        expect(find.byIcon(Icons.more_vert), findsOneWidget);
+        await tester.tap(find.byIcon(Icons.more_vert));
+        // to wait until Flutter is "done doing stuff".
+        await tester.pumpAndSettle();
 
-        // Items rendered in the ListView
+
+        expect(find.text('Home'), findsWidgets);
+        expect(find.text('Sign Up'), findsOneWidget);
+
         expect(find.text('Apple'), findsOneWidget);
         expect(find.text('Banana'), findsOneWidget);
 
-        // Buttons visible
         expect(find.text('Add Item'), findsOneWidget);
         expect(find.text('Delete Item'), findsOneWidget);
       });

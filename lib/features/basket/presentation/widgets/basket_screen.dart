@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:layout2/app/config/environment/environment_providers.dart';
 import 'package:layout2/features/basket/domain/entities/item.dart';
+import 'package:layout2/features/core/presentation/having_fun_app_bar.dart';
 import '../view_models/basket_view_model.dart';
 
 class BasketScreen extends ConsumerWidget {
@@ -14,9 +15,7 @@ class BasketScreen extends ConsumerWidget {
     final local = ref.watch(isDevelopment)?"dev": "no dev";
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Demo", style: Theme.of(context).textTheme.titleLarge,),
-        ),
+        appBar: HavingFunAppBar(titleText: "Home",),
         body: items.when(
             data: (items) => _displayItems(context, items, ref),
             error: (e,__) => _error(context,e),
