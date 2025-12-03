@@ -12,7 +12,7 @@ This repo is intentionally a **trial-and-error sandbox**, but with **real archit
 This repository exists to:
 
 - Try Flutter features, packages, patterns, and architectures
-- Learn by experimenting (and sometimes failing 😄)
+- Learn by experimenting 
 - Maintain good engineering practices such as testing, CI, coverage enforcement, and clean structure
 
 Even though this is a sandbox project, **merging to `main` requires passing tests and at least 50% code coverage**.
@@ -52,5 +52,5 @@ A simple layered structure:
 - **model** 
 - **view-model**
 
-### Folders organized by features
+#### Folders organized by features
 
