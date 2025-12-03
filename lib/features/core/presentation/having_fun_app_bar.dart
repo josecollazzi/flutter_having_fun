@@ -36,12 +36,14 @@ class HavingFunAppBar extends ConsumerWidget implements PreferredSizeWidget {
         icon: const Icon(Icons.more_vert),
         onSelected: (value) async{
           if (value == "home") context.goNamed(Routes.basketName);
+          if (value == "long_list") context.goNamed(Routes.longListName);
           if (value == "logout") {
             unawaited(ref.read(signUpNotifierProvider.notifier).logout());
           }
         },
         itemBuilder: (context) => [
           const PopupMenuItem(value: "home", child: Text("Home"),),
+          const PopupMenuItem(value: "long_list", child: Text("Long List"),),
           const PopupMenuItem(value: "logout", child: Text("Log Out"),),
         ],
       ),
@@ -54,10 +56,12 @@ class HavingFunAppBar extends ConsumerWidget implements PreferredSizeWidget {
         icon: const Icon(Icons.more_vert),
         onSelected: (value) {
           if (value == "home") context.goNamed(Routes.basketName);
+          if (value == "long_list") context.goNamed(Routes.longListName);
           if (value == "sign_up") context.goNamed(Routes.signUpName);
         },
         itemBuilder: (context) => [
           const PopupMenuItem(value: "home", child: Text("Home"),),
+          const PopupMenuItem(value: "long_list", child: Text("Long List"),),
           const PopupMenuItem(value: "sign_up", child: Text("Sign Up"),),
         ],
       ),
