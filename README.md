@@ -1,7 +1,7 @@
 # flutter_having_fun
 
 A playground project where I experiment, break things, fix them, and try out new ideas while learning Flutter.  
-This repo is intentionally a **trial-and-error sandbox**, but with **real architecture**, **real tooling**, and **required tests**—because even experiments should have good habits.
+This repo is intentionally a **trial-and-error sandbox**, but with **real architecture**, **real tooling**, and **required tests**.
 
 [![codecov](https://codecov.io/gh/josecollazzi/flutter_having_fun/branch/main/graph/badge.svg)](https://codecov.io/gh/josecollazzi/flutter_having_fun)
 
@@ -46,8 +46,8 @@ If tests fail or coverage drops below 50%, merging is blocked.
 ##  Architecture
 
 A simple layered structure:
-- **data**
-- **model** 
+- **model**
+- **view** 
 - **view-model**
 
 Folders are organized by features
@@ -56,8 +56,8 @@ Folders are organized by features
 
 ## Features & Tech Stack
 
-- long list has being built with bloc, in this scenario a project built with riverpod is migrated to bloc
-- all the other features has being built with riverpod
+- the feature long list has being built with bloc, in this scenario a project built with riverpod is migrated to bloc
 - todo: build a long list with items with images that take long to load (only computing when is needed), fetch dynamically using bloc
+- basket has being built with riverpod, question_interviews doesn't use any state management.
 
 ---
