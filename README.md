@@ -50,14 +50,23 @@ A simple layered structure:
 - **view** 
 - **view-model**
 
-Folders are organized by features
-
+The project is organized by feature-driven directory structure
+|── fetarues
+    └──feature name
+       └── data
+       |   └── domain
+       |   |   └── entities
+       |   |   └── use cases
+       |   └── repositories
+       └── presentation  
+              └── model_view (bloc or riverpod)
+              └── widgets
 ---
 
 ## Features & Tech Stack
 
-- the feature long list has being built with bloc, in this scenario a project built with riverpod is migrated to bloc
-- todo: build a long list with items with images that take long to load (only computing when is needed), fetch dynamically using bloc
-- basket has being built with riverpod, question_interviews doesn't use any state management.
+- the feature long list has being built with bloc, in this scenario a project built with riverpod is migrated to bloc and zodart (alternative to freeze) and both state management live together in transition time.
+- basket has being built with riverpod
+- question_interviews doesn't use any state management.
 
 ---
