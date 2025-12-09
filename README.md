@@ -51,10 +51,19 @@ A simple layered structure:
 - **view-model**
 
 The project is organized by feature-driven directory structure
+```
+|── features
+    └──feature name
+       └── data
+       |   └── domain
+       |   |   └── entities
+       |   |   └── use cases
+       |   └── repositories
+       └── presentation  
+              └── model_view (bloc or riverpod)
+              └── widgets
 
-|── features └── feature_name ├── data │ ├── domain │ │ ├── entities │ │ └── use_cases │ └── repositories └── presentation
-
-├── model_view (bloc or riverpod) └── widgets
+```
 ---
 
 ## Features & Tech Stack
