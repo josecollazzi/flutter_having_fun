@@ -66,6 +66,7 @@ The project is organized by feature-driven directory structure
 ## Features & Tech Stack
 
 - the feature long list has being built with bloc, in this scenario a project built with riverpod is migrated to bloc and zodart (alternative to freeze) and both state management live together in transition time.
+- todo: handle image request in a smart queue, give priority to images that are visible for the user
 - basket has being built with riverpod
 - question_interviews doesn't use any state management.
 
