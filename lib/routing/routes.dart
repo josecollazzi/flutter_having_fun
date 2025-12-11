@@ -7,4 +7,7 @@ abstract final class Routes {
 
   static const longListPath = 'long_list';
   static const longListName = 'long_list';
+
+  static const layoutPath = 'layout';
+  static const layoutName = 'layout';
 }

@@ -37,6 +37,7 @@ class HavingFunAppBar extends ConsumerWidget implements PreferredSizeWidget {
         onSelected: (value) async{
           if (value == "home") context.goNamed(Routes.basketName);
           if (value == "long_list") context.goNamed(Routes.longListName);
+          if (value == "layout") context.goNamed(Routes.layoutName);
           if (value == "logout") {
             unawaited(ref.read(signUpNotifierProvider.notifier).logout());
           }
@@ -44,6 +45,7 @@ class HavingFunAppBar extends ConsumerWidget implements PreferredSizeWidget {
         itemBuilder: (context) => [
           const PopupMenuItem(value: "home", child: Text("Home"),),
           const PopupMenuItem(value: "long_list", child: Text("Long List"),),
+          const PopupMenuItem(value: "layout", child: Text("Layout"),),
           const PopupMenuItem(value: "logout", child: Text("Log Out"),),
         ],
       ),
@@ -57,11 +59,13 @@ class HavingFunAppBar extends ConsumerWidget implements PreferredSizeWidget {
         onSelected: (value) {
           if (value == "home") context.goNamed(Routes.basketName);
           if (value == "long_list") context.goNamed(Routes.longListName);
+          if (value == "layout") context.goNamed(Routes.layoutName);
           if (value == "sign_up") context.goNamed(Routes.signUpName);
         },
         itemBuilder: (context) => [
           const PopupMenuItem(value: "home", child: Text("Home"),),
           const PopupMenuItem(value: "long_list", child: Text("Long List"),),
+          const PopupMenuItem(value: "layout", child: Text("Layout"),),
           const PopupMenuItem(value: "sign_up", child: Text("Sign Up"),),
         ],
       ),

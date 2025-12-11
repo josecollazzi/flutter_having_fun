@@ -72,5 +72,5 @@ The project is organized by feature-driven directory structure
 - todo: handle image request in a smart queue, give priority to images that are visible for the user
 - basket has being built with riverpod
 - question_interviews doesn't use any state management.
-
+- layout are just some basic examples (list, columns, adaptative layout, etc)
 ---
